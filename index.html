@@ -1,285 +1,184 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>孤舟 - 静静地漂泊在思绪的海洋中</title><meta name="author" content="Konjacer,1175590069@qq.com"><meta name="copyright" content="Konjacer"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="仰望星空，脚踏实地，寻觅纯粹，奔向自由">
-<meta property="og:type" content="website">
-<meta property="og:title" content="孤舟">
-<meta property="og:url" content="https://konjacor.github.io/index.html">
-<meta property="og:site_name" content="孤舟">
-<meta property="og:description" content="仰望星空，脚踏实地，寻觅纯粹，奔向自由">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://konjacor.github.io/img/xiaozhai.jpg">
-<meta property="article:author" content="Konjacer">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://konjacor.github.io/img/xiaozhai.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://konjacor.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '孤舟',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2024-12-24 17:49:22'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuanru Wei — Generative AI &amp; Game Research</title>
+  <meta name="description" content="Chuanru Wei — Master's student at Nankai University. Research on Generative AI, AI Agents, and Game AI.">
+  <meta name="author" content="Chuanru Wei">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+  <!-- Fonts: Anton (display), Inter (body), JetBrains Mono (code) — served via jsDelivr (China-friendly) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/anton@5.0.20/400.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.20/400.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.20/500.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.20/700.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.20/400.css">
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+  <!-- Loading splash (P5R "TAKE YOUR TIME") -->
+  <div id="splash" aria-hidden="true">
+    <div class="splash-inner">
+      <span class="splash-text">TAKE YOUR TIME</span>
+      <span class="splash-sub">loading<span class="dots"><i>.</i><i>.</i><i>.</i></span></span>
+    </div>
+  </div>
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="孤舟" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/xiaozhai.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">58</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">88</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/background.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">孤舟</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">孤舟</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Konjacor" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1175590069@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/Konjacor" target="_blank" title="Gitee"><i class="fa-solid fa-g"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="数据结构与算法"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构与算法"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="数据结构与算法">数据结构与算法</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-25T11:54:24.000Z" title="发表于 2022-09-25 19:54:24">2022-09-25</time></span></div><div class="content">
+  <div class="page">
 
-排序算法常用排序算法的总结和对比一张排序算法的比较图
-相关术语解释
-稳定：如果 a 原本在 b 前面，而 a&#x3D;b，排序之后 a 仍然在 b 的前面；
-不稳定：如果 a 原本在 b 的前面，而 a&#x3D;b，排序之后 a 可能会出现在 b 的后面；
-内部排序：所有排序操作都在内存中完成；
-外部排序：由于数据太大，因此把数据放在磁盘中，而排序通过磁盘和内存的数据传输才能进行；
-时间复杂度： 一个算法执行所耗费的时间。
-空间复杂度：运行完一个程序所需内存的大小。
-n: 数据规模
-k: “桶”的个数
-In-place: 不占用额外内存
-Out-place: 占用额外内存
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="top">
+      <div class="hero-texture" aria-hidden="true"></div>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-brand" href="#top">CW<span class="nav-brand-dot">.</span></a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="/blog/" target="_blank" rel="noopener">Blog</a>
+        </div>
+        <button class="nav-theme" id="theme-toggle" type="button" title="Toggle theme" aria-label="Toggle theme">◐</button>
+      </nav>
 
-新人入坑冒泡排序
-这个是典中典了，任何学过算法的人估计都学过这个吧，它简单的算法思想也让他成为了入坑排序算法的最佳选择。
+      <div class="hero-body">
+        <div class="hero-stamp">Master's Student</div>
+        <h1 class="hero-name">Chuanru<br>Wei</h1>
+        <p class="hero-tagline">Generative AI &nbsp;·&nbsp; Game AI &nbsp;·&nbsp; Agentic Systems</p>
+        <p class="hero-meta">College of Software · Nankai University</p>
+        <div class="hero-actions">
+          <a class="btn btn-solid chamfer" href="#publications">View Publications</a>
+          <a class="btn btn-ghost chamfer" href="#research">Research Interests</a>
+        </div>
+      </div>
+    </header>
 
-基本介绍
-冒泡排序（Bubble Sorting）的基本思想是：通过对待排序序列从前向后（从下标较小的元素开始）,依次比较相邻元素的值，若发现逆序则交换，使值较大的元素逐渐从前移向后部，就象水底下的气泡一样逐渐向上冒。
-需要两层循环，每次外层循环都会使得无序区域最大的一个数字到达正确的 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/09/03/%E6%90%AD%E5%BB%BA%E9%97%AE%E5%8D%B7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B/" title="搭建问卷系统的基本流程"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建问卷系统的基本流程"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/09/03/%E6%90%AD%E5%BB%BA%E9%97%AE%E5%8D%B7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%B5%81%E7%A8%8B/" title="搭建问卷系统的基本流程">搭建问卷系统的基本流程</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-03T13:17:51.000Z" title="发表于 2022-09-03 21:17:51">2022-09-03</time></span></div><div class="content">
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <h2 class="section-title"><span class="tilt">About</span></h2>
+      <div class="about-grid">
+        <div class="about-photo chamfer">
+          <img src="assets/img/avatar.jpg" alt="Chuanru Wei">
+        </div>
+        <div class="about-text">
+          <p>
+            Hi — I'm <strong>Chuanru Wei</strong>, a Master's student at the College of Software,
+            Nankai University, advised by <strong>Associate Prof. Mingming Liu</strong>.
+          </p>
+          <p>
+            My research sits at the intersection of <strong>Generative AI</strong> and
+            <strong>games</strong>. I build agentic systems that create and reason about interactive
+            narrative, and I care about making AI-native game creation <em>reliable</em>,
+            <em>controllable</em>, and <em>verifiable</em>. I'm currently applying for PhD positions.
+          </p>
+          <p class="about-mono">
+            <span class="mono-label">research</span> generative ai · ai agents · game ai
+            <br>
+            <span class="mono-label">contact</span> weichuanru@mail.nankai.edu.cn
+          </p>
+        </div>
+      </div>
+    </section>
 
-摘要
-实验室最近要做个新的项目，是在实验室老项目的基础上增加一个问卷系统，我是其中的开发者之一，所以想要借这个机会，写个博客，熟悉一下软件项目从头开始的搭建流程，学习一下过程中用到的新的技术和思想。
+    <!-- ============ RESEARCH INTERESTS (calling card) ============ -->
+    <section class="section" id="research">
+      <h2 class="section-title"><span class="tilt">Research Interests</span></h2>
+      <div class="card-calling chamfer" id="interests">
+        <div class="card-calling-head">
+          <span class="card-calling-stamp">Calling Card</span>
+          <span class="card-calling-note">// what I work on</span>
+        </div>
+        <ul class="interest-list">
+          <li>Generative AI</li>
+          <li>AI Agents</li>
+          <li>Game AI</li>
+          <li>Immersive Game Design</li>
+          <li>Procedural Content Generation</li>
+          <li>AI-native Game Creation</li>
+          <li>Machine Learning</li>
+        </ul>
+      </div>
+    </section>
 
-需求分析阶段
-在这个阶段，主要是分析一下将要做的软件的基本功能，可以画一个数据流图(DFD)来说明我们应该”怎么做”，一张质量好的DFD可以让开发事半功倍（我画的比较拉），矩形为实体，双横线为数据存储的地方，箭头代表数据的流向，圆形代表对数据的处理。：
+    <!-- ============ NEWS ============ -->
+    <section class="section" id="news">
+      <h2 class="section-title"><span class="tilt">News</span></h2>
+      <ul class="news-list" id="news-list"><!-- rendered from data/news.json --></ul>
+    </section>
 
+    <!-- ============ PUBLICATIONS ============ -->
+    <section class="section" id="publications">
+      <h2 class="section-title"><span class="tilt">Publications</span></h2>
+      <div class="pub-list" id="pub-list"><!-- rendered from data/papers.json --></div>
+    </section>
 
-然后可以画一下ER图来说明数据库各表之间的逻辑和各表的设计规范，ER图可以画成描述型的或者是图解型的，大文本最好用text类型：
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <h2 class="section-title"><span class="tilt">Projects</span></h2>
+      <div class="project-grid" id="project-grid"><!-- rendered from data/projects.json --></div>
+    </section>
 
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <h2 class="section-title"><span class="tilt">Education</span></h2>
+      <div class="edu-list">
+        <div class="edu-item chamfer">
+          <span class="edu-year">2024 — present</span>
+          <div class="edu-info">
+            <h3>M.Sc. in Software Engineering</h3>
+            <p>College of Software, Nankai University</p>
+            <p class="edu-note">Advisor: Associate Prof. Mingming Liu</p>
+          </div>
+        </div>
+        <div class="edu-item chamfer">
+          <span class="edu-year">2020 — 2024</span>
+          <div class="edu-info">
+            <h3>B.Eng.</h3>
+            <p><!-- TODO: undergraduate school & major --></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-然后就是要根据之前画好的ER图开始建各种数据库的实体表，不过在这之前出现了一些问题，就是由于历史遗留原因，用户的表是两种类型的，这两种类型的表分别对应着不同的人群，但是在这个项目中，如果每次都需要联表增删改查未免有些不方便，因此我们想到可以将两个表中相同的部分抽取出来做成一个视图，然后放到redis里面供操作，但是这样又出现了一个问题，由于视图的select语句使用到了union，所以这就使得这个视 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/08/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="设计模式"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/08/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">设计模式</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-08-20T02:35:06.000Z" title="发表于 2022-08-20 10:35:06">2022-08-20</time></span></div><div class="content">
+    <!-- ============ BLOG ENTRY ============ -->
+    <section class="section" id="blog-entry">
+      <h2 class="section-title"><span class="tilt">Blog</span></h2>
+      <a class="card-blog chamfer" href="/blog/" target="_blank" rel="noopener">
+        <div class="card-blog-text">
+          <h3>Writing archive</h3>
+          <p>Notes on Java, systems, and everything I've learned since 2022.</p>
+        </div>
+        <span class="card-blog-arrow">→</span>
+      </a>
+    </section>
 
-设计模式介绍设计模式的重要性
-软件工程中，设计模式（design pattern）是对软件设计中普遍存在（反复出现）的各种问题，所提出的解决方案。这个术语是由埃里希·伽玛（Erich Gamma）等人在1990年代从建筑设计领域引入到计算机科学的
+    <!-- ============ CV ============ -->
+    <section class="section section-cv" id="cv">
+      <h2 class="section-title"><span class="tilt">Curriculum Vitae</span></h2>
+      <!-- TODO: drop your CV at assets/CV.pdf and update the href below -->
+      <a class="btn btn-cv chamfer" href="#" id="cv-link" title="CV coming soon">
+        TAKE MY CV
+      </a>
+    </section>
 
-就像建筑一样，当你建造一个小木屋的时候，由于建筑的规模比较小，因此可以随便打打地基，随便规划规划小木屋的结构，在建小木屋的时候做的决定都可以相对随便一点；但是如果要是想要建造一座摩天大楼的话，就必须严格计算地基的深度，以及严谨地规划大楼的结构，以保证在建造大楼的时候不会出现问题。同理软件开发也是一样，如果要做的软件规模很小，那么可能就用不太到设计模式，因为它的逻辑结构很简单如果要是强行使用设计模式可能反而还会使得可读性下降，总的来说就是如果开发规模很小的软件可以使用设计模式，但是没有很大的必要；但是随着软件规模的增大，软件的可读性、稳定性、健壮性(和稳定性不同，要有稳定性后才能谈得上健壮性，稳定性多指没有外界因素影响的情况下系统稳定运行的程度，健壮性多指在外界某因素的影响下系统的抗影响的程度)、可维护性、可扩展性、安全性以及各模块儿之间 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/07/27/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E5%8F%8A%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" title="微信小程序基本结构及搭建流程"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="微信小程序基本结构及搭建流程"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/07/27/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E5%8F%8A%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" title="微信小程序基本结构及搭建流程">微信小程序基本结构及搭建流程</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-07-27T02:26:29.000Z" title="发表于 2022-07-27 10:26:29">2022-07-27</time></span></div><div class="content">
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://github.com/Konjacor" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:weichuanru@mail.nankai.edu.cn">Email</a>
+        <!-- TODO: add Google Scholar / ORCID / DBLP links -->
+        <a href="#" title="Google Scholar — coming soon">Scholar</a>
+        <a href="#" title="ORCID — coming soon">ORCID</a>
+      </div>
+      <p class="footer-copy">© 2026 Chuanru Wei · Nankai University</p>
+    </footer>
 
-什么是微信小程序
-微信小程序，简称小程序，英文名 Mini Program，是一种不需要下载安装即可使用的应用( 张小龙对其的定义是无需安装，用完即走，实际上是需要安装的，只不过小程序的体积特别小， 下载速度很快，用户感觉不到下载的过程 )
-小程序刚发布的时候要求压缩包的体积不能大于 1M,，否则无法通过，在 2017 年 4 月做了改进，由原来的 1M 提升到 2M；不过后面介绍了可以利用分包的方式将整个体积扩大到最大16M。
+  </div>
 
-小程序可以干什么
-同 App 进行互补，提供同 app 类型的功能，比 app 使用方便简洁
-通过扫一扫或者在微信搜索即可下载
-用户使用频率不高，但又不得不用的功能软件，目前看来小程序是首选
-连接线上线下
-开发门槛低， 成本低
-
-小程序开发前的准备
-可下载官方的微信开发工具来进行开发，下载地址，也可以使用vscode、idea等传统的IDE来进行开发，不过最好还是用官方的开发工具，因为官方的开发工具对小程序的开发做了很多优化和适配，以及开放了很多方便的接口功能以及功能选项供开发者使用。
-用自己的微信号在微信公众平台注册一个小程序的帐号。官网
-这次示例的小 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/01/20/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" title="综合知识整理"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="综合知识整理"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/01/20/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" title="综合知识整理">综合知识整理</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-20T03:24:03.000Z" title="发表于 2023-01-20 11:24:03">2023-01-20</time></span></div><div class="content">
-
-Java基础Java 语言有哪些特点?
-简单易学；
-面向对象（封装，继承，多态）；
-平台无关性（ Java 虚拟机实现平台无关性）；
-支持多线程（ C++ 语言没有内置的多线程机制，因此必须调用操作系统的多线程功能来进行多线程程序设计，而 Java 语言却提供了多线程支持）；
-可靠性；
-安全性；
-支持网络编程并且很方便（ Java 语言诞生本身就是为简化网络编程设计的，因此 Java 语言不仅支持网络编程而且很方便）；
-编译与解释并存；
-
-JVM
-Java 虚拟机（JVM）是运行 Java 字节码的虚拟机。JVM 有针对不同系统的特定实现（Windows，Linux，macOS），目的是使用相同的字节码，它们都会给出相同的结果。字节码和不同系统的 JVM 实现是 Java 语言“一次编译，随处可以运行”的关键所在。
-JVM 并不是只有一种！只要满足 JVM 规范，每个公司、组织或者个人都可以开发自己的专属 JVM。 也就是说我们平时接触到的 HotSpot VM 仅仅是是 JVM 规范的一种实现而已。
-OS运行在硬件之上，JVM运行在OS之上。
-
-JDK和JRE
-JDK 是 Jav ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/06/25/JavaWeb%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" title="JavaWeb核心技术"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaWeb核心技术"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/06/25/JavaWeb%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" title="JavaWeb核心技术">JavaWeb核心技术</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-25T13:17:57.000Z" title="发表于 2022-06-25 21:17:57">2022-06-25</time></span></div><div class="content">
-
-软件的结构
-
-前端的开发流程
-不过现在jsp基本上已经被淘汰掉了。
-网页的组成部分​	页面由三部分内容组成，分别是内容（结构）、表现、行为。 
-​	内容（结构），是我们在页面中可以看到的数据。我们称之为内容。一般内容 我们使用html技术来展示。 
-​	表现，指的是这些内容在页面上的展示形式。比如说。布局，颜色，大小等等。一般使用 CSS 技术实现。
-​	行为，指的是页面中元素与输入设备交互的响应。一般使用 javascript 技术实现。
-HTMLHTML简介Hyper Text Markup Language （超文本标记语言） 简写：HTML 
-HTML 通过标签来标记要显示的网页中的各个部分。网页文件本身是一种文本文件， 通过在文本文件中添加标记符，可以告诉浏览器如何显示其中的内容（如：文字如何处理，画 面如何安排，图片如何显示等） 
-HTML文件的书写规范123456789101112&lt;!DOCTYPE html&gt;                 告知浏览器使用的html版本&lt;html lang=&quot;en&quot;&gt;            ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/04/15/The-core-of-studying/" title="The core of studying"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The core of studying"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/15/The-core-of-studying/" title="The core of studying">The core of studying</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-15T09:45:49.000Z" title="发表于 2023-04-15 17:45:49">2023-04-15</time></span></div><div class="content">
-
-Focus on your business
-Concentrate or fail.
-
-Explore the essence of knowledge
-We can’t just focus on the surface of knowledge and should explore the essence of knowledge. So we should frequently speak “Why?” for that.
-
-Associate the things what you want to remember with another things
-Because the core of memory is association.
-
-Abstract questions that you meet to a specific model
-Then,you can solve the question in your profound knowledge or the solution of similar model that you remembered bef ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/12/22/%E8%B4%BE%E5%B2%9B%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" title="贾岛项目开发日志"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="贾岛项目开发日志"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/12/22/%E8%B4%BE%E5%B2%9B%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" title="贾岛项目开发日志">贾岛项目开发日志</a><div class="article-meta-wrap"><span class="article-meta"><i class="fas fa-thumbtack sticky"></i><span class="sticky">置顶</span><span class="article-meta-separator">|</span></span><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-12-22T14:24:37.000Z" title="发表于 2022-12-22 22:24:37">2022-12-22</time></span></div><div class="content">
-
-前言
-本项目基于尚硅谷的谷粒商城项目，主要是做的时候我想根据自己所学的东西对谷粒商城进行一定程度的改造，有点属于自己的特色，做这个项目的过程也是我巩固之前所学知识的一个机会，所以趁这个机会，把开发日志写一下，积累一下实战经验。
-
-2022&#x2F;12&#x2F;23为什么使用微服务的架构风格
-微服务的架构风格，实际上就是将一个单独的应用程序拆分成了多个小服务，每个小服务运行在自己的的进程中，并且它们之间使用轻量级的通信机制，通常是HTTP API，这些服务是围绕着应用的业务能力来构建的，并且可以独立部署，这些服务可以使用不同的编程语言编写、可以使用不同的数据存储技术，并且所有服务之间保持着最低限度的集中式管理。简而言之：微服务架构拒绝大型单体应用，基于业务边界进行服务微化拆分，各个服务独立部署运行。
-使用微服务的架构风格使得项目获得了很好的可扩展性，再需要添加新功能的时候只需要把精力集中在开发新服务上即可，不用把精力花费在之前的代码上，这就是使用微服务解耦带来的好处之一，除此之外使用微服务的架构风格遇到错误和故障可以将其隔离以防止这些错误蔓延到别的服务模块，微服务带来的好处还有 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/10/31/%E7%A1%95%E5%A3%AB%E5%BF%83%E5%BE%97/" title="硕士心得"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="硕士心得"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/10/31/%E7%A1%95%E5%A3%AB%E5%BF%83%E5%BE%97/" title="硕士心得">硕士心得</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-10-31T06:13:35.000Z" title="发表于 2024-10-31 14:13:35">2024-10-31</time></span></div><div class="content">
-
-关于论文
-主要分为大论文和小论文，小论文是毕业要求，大论文是学位论文，两者侧重点不同，小论文要求创新思维，大论文可能更侧重于要求实事求是地描述你硕士三年做的事情，所以说小论文最好不要平庸，而大论文可以接受平庸。
-找灵感的基本思路就是在谷歌学术搜索https://scholar.google.com/**或者**知网、letpub上找你想写的方向的文章，然后下载下来，可以借助知云文献翻译和chatgpt等工具帮你阅读和总结，直到你有了idea，和导师沟通过之后，你去写文章出来，投的时候去对应期刊的官网注册然后走流程，这个属于是比较宏观的描述，之后会写更详细的内容。
-如果想要快速完成论文，切忌完美主义，识时务者为俊杰；如果想造航母，那还是要精雕细琢一下的。
-
-如何确定水刊
-从谷歌学术中搞点自己领域的论文下来，把他们的期刊名记录下来，去letpub上找对应的期刊名，评分越低的越水。但是水刊不一定好发。。。好像是。。。
-
-我的想法
-我想先快速搞一篇论文出来然后开投，这样研二我说不定就可以去实习了，但是如果要是写一个我完全不懂的领域的论文的话，花费的时间又比较多，所以我在想有没有什么主题，可 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2024/09/18/IT%E8%BF%90%E7%BB%B4%E5%89%8D%E6%B2%BF/" title="IT运维前沿"><img class="post_bg" src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IT运维前沿"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/09/18/IT%E8%BF%90%E7%BB%B4%E5%89%8D%E6%B2%BF/" title="IT运维前沿">IT运维前沿</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-09-18T02:04:08.000Z" title="发表于 2024-09-18 10:04:08">2024-09-18</time></span></div><div class="content">
-
-1
-主要参考书籍：《SRE：Google运维解密》
-
-
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/xiaozhai.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Konjacer</div><div class="author-info__description">仰望星空，脚踏实地，寻觅纯粹，奔向自由</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">58</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">88</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Konjacor" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1175590069@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://gitee.com/Konjacor" target="_blank" title="Gitee"><i class="fa-solid fa-g"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/10/31/%E7%A1%95%E5%A3%AB%E5%BF%83%E5%BE%97/" title="硕士心得"><img src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="硕士心得"/></a><div class="content"><a class="title" href="/2024/10/31/%E7%A1%95%E5%A3%AB%E5%BF%83%E5%BE%97/" title="硕士心得">硕士心得</a><time datetime="2024-10-31T06:13:35.000Z" title="发表于 2024-10-31 14:13:35">2024-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/09/18/IT%E8%BF%90%E7%BB%B4%E5%89%8D%E6%B2%BF/" title="IT运维前沿"><img src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IT运维前沿"/></a><div class="content"><a class="title" href="/2024/09/18/IT%E8%BF%90%E7%BB%B4%E5%89%8D%E6%B2%BF/" title="IT运维前沿">IT运维前沿</a><time datetime="2024-09-18T02:04:08.000Z" title="发表于 2024-09-18 10:04:08">2024-09-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/07/05/C%E8%AF%AD%E8%A8%80%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2/" title="C语言与数据结构教学大纲"><img src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C语言与数据结构教学大纲"/></a><div class="content"><a class="title" href="/2024/07/05/C%E8%AF%AD%E8%A8%80%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2/" title="C语言与数据结构教学大纲">C语言与数据结构教学大纲</a><time datetime="2024-07-05T10:19:21.000Z" title="发表于 2024-07-05 18:19:21">2024-07-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/14/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%A1%B9%E7%9B%AE-%E5%90%88%E4%BD%9C%E5%8A%9E%E5%AD%A6%E8%AF%84%E4%BC%B0%E5%B9%B3%E5%8F%B0/" title="实验室项目-合作办学评估平台"><img src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实验室项目-合作办学评估平台"/></a><div class="content"><a class="title" href="/2024/06/14/%E5%AE%9E%E9%AA%8C%E5%AE%A4%E9%A1%B9%E7%9B%AE-%E5%90%88%E4%BD%9C%E5%8A%9E%E5%AD%A6%E8%AF%84%E4%BC%B0%E5%B9%B3%E5%8F%B0/" title="实验室项目-合作办学评估平台">实验室项目-合作办学评估平台</a><time datetime="2024-06-14T02:15:32.000Z" title="发表于 2024-06-14 10:15:32">2024-06-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/04/23/%E8%88%B8%E6%96%8B%E5%BF%83%E6%B3%95/" title="舸斋心法"><img src="/img/background.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="舸斋心法"/></a><div class="content"><a class="title" href="/2024/04/23/%E8%88%B8%E6%96%8B%E5%BF%83%E6%B3%95/" title="舸斋心法">舸斋心法</a><time datetime="2024-04-23T15:20:13.000Z" title="发表于 2024-04-23 23:20:13">2024-04-23</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Ajax/" style="font-size: 1.1em; color: #999">Ajax</a> <a href="/tags/Alibaba/" style="font-size: 1.1em; color: #999">Alibaba</a> <a href="/tags/CSS/" style="font-size: 1.1em; color: #999">CSS</a> <a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.1em; color: #999">C语言</a> <a href="/tags/Dart/" style="font-size: 1.1em; color: #999">Dart</a> <a href="/tags/Docker/" style="font-size: 1.1em; color: #999">Docker</a> <a href="/tags/EL/" style="font-size: 1.1em; color: #999">EL</a> <a href="/tags/EffectiveJava/" style="font-size: 1.1em; color: #999">EffectiveJava</a> <a href="/tags/HTML/" style="font-size: 1.1em; color: #999">HTML</a> <a href="/tags/Hexo/" style="font-size: 1.3em; color: #99a1ac">Hexo</a> <a href="/tags/JDBC/" style="font-size: 1.1em; color: #999">JDBC</a> <a href="/tags/JSP/" style="font-size: 1.1em; color: #999">JSP</a> <a href="/tags/JSTL/" style="font-size: 1.1em; color: #999">JSTL</a> <a href="/tags/JUC%E5%B7%A5%E5%85%B7%E7%B1%BB/" style="font-size: 1.1em; color: #999">JUC工具类</a> <a href="/tags/JVM/" style="font-size: 1.1em; color: #999">JVM</a> <a href="/tags/Java/" style="font-size: 1.5em; color: #99a9bf">Java</a> <a href="/tags/JavaScript/" style="font-size: 1.1em; color: #999">JavaScript</a> <a href="/tags/JavaWeb/" style="font-size: 1.1em; color: #999">JavaWeb</a> <a href="/tags/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 1.1em; color: #999">Java虚拟机</a> <a href="/tags/Maven/" style="font-size: 1.1em; color: #999">Maven</a> <a href="/tags/MyBatis/" style="font-size: 1.1em; color: #999">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 1.1em; color: #999">MySQL</a> <a href="/tags/Mybatis/" style="font-size: 1.1em; color: #999">Mybatis</a> <a href="/tags/RabbitMQ/" style="font-size: 1.1em; color: #999">RabbitMQ</a> <a href="/tags/Redis/" style="font-size: 1.1em; color: #999">Redis</a> <a href="/tags/SSM/" style="font-size: 1.1em; color: #999">SSM</a> <a href="/tags/Servlet/" style="font-size: 1.1em; color: #999">Servlet</a> <a href="/tags/Spring/" style="font-size: 1.1em; color: #999">Spring</a> <a href="/tags/SpringBoot/" style="font-size: 1.3em; color: #99a1ac">SpringBoot</a> <a href="/tags/SpringCloud/" style="font-size: 1.3em; color: #99a1ac">SpringCloud</a> <a href="/tags/SpringCloudAlibaba/" style="font-size: 1.1em; color: #999">SpringCloudAlibaba</a> <a href="/tags/SpringMVC/" style="font-size: 1.3em; color: #99a1ac">SpringMVC</a> <a href="/tags/Tomcat/" style="font-size: 1.1em; color: #999">Tomcat</a> <a href="/tags/dart/" style="font-size: 1.1em; color: #999">dart</a> <a href="/tags/flutter/" style="font-size: 1.3em; color: #99a1ac">flutter</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/java/" style="font-size: 1.1em; color: #999">java</a> <a href="/tags/linux/" style="font-size: 1.1em; color: #999">linux</a> <a href="/tags/markdown/" style="font-size: 1.1em; color: #999">markdown</a> <a href="/tags/mybatis-plus/" style="font-size: 1.1em; color: #999">mybatis-plus</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/04/"><span class="card-archive-list-date">四月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">三月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">58</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-12-24T09:49:22.026Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/background.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Konjacer</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    window.typed = new Typed("#subtitle", {
-      strings: ["蔚蓝深海映月影茫茫","心绪漂浮海上","渺小浮舟寻一束微光","梦停留的地方"],
-      startDelay: 300,
-      typeSpeed: 150,
-      loop: true,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = '蔚蓝深海映月影茫茫'
-  }
-}
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

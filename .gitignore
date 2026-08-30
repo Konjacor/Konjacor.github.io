@@ -1,0 +1,16 @@
+# --- Hexo blog source (kept locally, NOT deployed) ---
+# Regenerate the /blog archive with:  cd MyBlog && npx hexo clean && npx hexo generate
+MyBlog/
+
+# Raw paper sources (clean copies live in /papers)
+paper/
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

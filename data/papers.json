@@ -1,0 +1,43 @@
+[
+  {
+    "id": "grail-vn",
+    "title": "GRAIL-VN: A Graph-Grounded Runtime-Verifiable Agentic Framework for Reliable Branching Visual Novel Script Generation",
+    "authors": "Chuanru Wei, Kaili Chen",
+    "venue": "AAAI AIIDE 2026",
+    "year": "2026",
+    "role": "Co-first Author",
+    "note": "Accepted",
+    "links": {
+      "pdf": "papers/GRAIL-VN.pdf",
+      "code": "https://github.com/Konjacor/GRAIL-VN"
+    },
+    "bibtex": "@inproceedings{wei2026grailvn,\n  title     = {GRAIL-VN: A Graph-Grounded Runtime-Verifiable Agentic Framework for Reliable Branching Visual Novel Script Generation},\n  author    = {Chuanru Wei and Kaili Chen},\n  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment (AIIDE)},\n  year      = {2026},\n  note      = {Accepted}\n}"
+  },
+  {
+    "id": "hdh-dti",
+    "title": "Drug-target interaction prediction via heterogeneous-graph dual-channel representation and hard negative sampling",
+    "authors": "Chuanru Wei, Jiongxin Liu, Jiameng Le, Mingming Liu, Yongnan Luo, Hong Qin, Guangbo Yu",
+    "venue": "Journal of Computer Applications",
+    "year": "2026",
+    "role": "First Author",
+    "note": "Accepted · in press",
+    "links": {
+      "pdf": "papers/HDH-DTI.pdf",
+      "doi": "https://doi.org/10.11772/j.issn.1001-9081.2025121587"
+    },
+    "bibtex": "@article{wei2026hdhdti,\n  title   = {Drug-target interaction prediction via heterogeneous-graph dual-channel representation and hard negative sampling},\n  author  = {Chuanru Wei and Jiongxin Liu and Jiameng Le and Mingming Liu and Yongnan Luo and Hong Qin and Guangbo Yu},\n  journal = {Journal of Computer Applications},\n  year    = {2026},\n  doi     = {10.11772/j.issn.1001-9081.2025121587}\n}"
+  },
+  {
+    "id": "t-fdr",
+    "title": "T-FDR: Trust-guided frequency-aware diffusion refinement for reliable cardiac MRI segmentation under limited annotations",
+    "authors": "Kaili Chen, Chuanru Wei, Yu Yan, Yutao Hu, Chunfeng Yang, Yudong Zhang, Yang Chen",
+    "venue": "Computerized Medical Imaging and Graphics",
+    "year": "2026",
+    "role": "Co-author",
+    "note": "Accepted (finalizing references)",
+    "links": {
+      "pdf": "papers/T-FDR.pdf"
+    },
+    "bibtex": "@article{chen2026tfdr,\n  title   = {T-FDR: Trust-guided frequency-aware diffusion refinement for reliable cardiac MRI segmentation under limited annotations},\n  author  = {Kaili Chen and Chuanru Wei and Yu Yan and Yutao Hu and Chunfeng Yang and Yudong Zhang and Yang Chen},\n  journal = {Computerized Medical Imaging and Graphics},\n  year    = {2026},\n  note    = {Accepted}\n}"
+  }
+]
