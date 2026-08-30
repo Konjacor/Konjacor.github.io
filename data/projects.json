@@ -2,10 +2,27 @@
   {
     "name": "GRAIL-VN",
     "tag": "LLM Agents · Narrative",
-    "desc": "A graph-grounded, runtime-verifiable agentic framework for reliable branching visual novel script generation. Maintains a persistent Narrative World Graph with pre-commit verification (PGCR), lookahead branch planning (LBP), and dynamic cast expansion (JITC).",
+    "desc": "Graph-grounded, runtime-verifiable agentic framework for reliable branching visual novel script generation — persistent narrative world graph, constraint-based generation and verification, and lookahead branch planning.",
     "links": [
       { "label": "Code", "url": "https://github.com/Konjacor/GRAIL-VN" },
       { "label": "Paper", "url": "papers/GRAIL-VN.pdf" }
+    ]
+  },
+  {
+    "name": "HDH-DTI",
+    "tag": "Graph Learning · Drug Discovery",
+    "desc": "Heterogeneous-graph dual-channel representation with tempered-quota cluster-aware hard negative sampling for drug–target interaction prediction.",
+    "links": [
+      { "label": "Paper", "url": "papers/HDH-DTI.pdf" },
+      { "label": "DOI", "url": "https://doi.org/10.11772/j.issn.1001-9081.2025121587" }
+    ]
+  },
+  {
+    "name": "T-FDR",
+    "tag": "Medical Image Segmentation",
+    "desc": "Trust-guided, frequency-aware diffusion refinement for reliable cardiac MRI segmentation under limited annotations — contributed to implementation and experimental evaluation.",
+    "links": [
+      { "label": "Paper", "url": "papers/T-FDR.pdf" }
     ]
   }
 ]

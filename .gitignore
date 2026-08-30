@@ -5,6 +5,11 @@ MyBlog/
 # Raw paper sources (clean copies live in /papers)
 paper/
 
+# CV source & old versions (the served PDF is /CV.pdf)
+/CV.tex
+/CV2.pdf
+/main-test2.tex
+
 # Node
 node_modules/
 

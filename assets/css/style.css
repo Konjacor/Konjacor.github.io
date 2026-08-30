@@ -342,6 +342,13 @@ h1, h2, h3, p { margin: 0; }
   box-shadow: inset 0 0 0 1px var(--red);
   transform: translateY(-2px);
 }
+.card-calling-desc {
+  margin-top: 26px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.8;
+}
 
 /* ---- news -------------------------------------------------------------- */
 .news-list { display: flex; flex-direction: column; }
@@ -472,6 +479,39 @@ h1, h2, h3, p { margin: 0; }
 .edu-info h3 { font-size: 1.05rem; margin-bottom: 4px; }
 .edu-info p { font-size: 0.92rem; color: var(--muted); }
 .edu-note { font-family: var(--font-mono); font-size: 0.8rem; color: var(--yellow); margin-top: 6px; }
+
+/* ---- experience -------------------------------------------------------- */
+.exp-list { display: flex; flex-direction: column; gap: 22px; }
+.exp-item { background: var(--surface); border: 1px solid var(--line); padding: 26px 28px; }
+.exp-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 12px; }
+.exp-head h3 { font-size: 1.15rem; color: var(--red); letter-spacing: 0.02em; }
+.exp-meta { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
+.exp-date { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); margin-left: auto; }
+.exp-bullets { padding-left: 0; }
+.exp-bullets li {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.exp-bullets li::before { content: "▸"; position: absolute; left: 0; color: var(--red); }
+
+/* ---- awards ------------------------------------------------------------ */
+.awards-list { display: flex; flex-direction: column; }
+.awards-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 14px 4px;
+  border-bottom: 1px dashed var(--line);
+  font-size: 0.95rem;
+}
+.award-name::before { content: "★ "; color: var(--yellow); }
+.award-year { font-family: var(--font-mono); font-size: 0.82rem; color: var(--red); white-space: nowrap; }
 
 /* ---- blog card --------------------------------------------------------- */
 .card-blog {
